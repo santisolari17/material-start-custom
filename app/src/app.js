@@ -8,10 +8,9 @@ import 'angular-material';
 import AppController from 'src/AppController';
 import Users from 'src/users/Users';
 
-export default angular
-  .module( "starter-app", [ 'ngMaterial', Users.name ] )
+export default angular.module( 'starter-app', [ 'ngMaterial', Users.name ] )
   .config(($mdIconProvider, $mdThemingProvider) => {
-
+    // Register the user `avatar` icons
     $mdIconProvider
       .defaultIconSet("./assets/svg/avatars.svg", 128)
       .icon("menu", "./assets/svg/menu.svg", 24)
@@ -22,7 +21,7 @@ export default angular
       .icon("phone", "./assets/svg/phone.svg", 24);
 
     $mdThemingProvider.theme('default')
-      .primaryPalette('deep-orange')
+      .primaryPalette('brown')
       .accentPalette('red');
   })
   .controller('AppController', AppController);
